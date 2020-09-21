@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+       <h1>Fotoğraf Gönderme İşlemi</h1>
+       <p class="lead">Bu formu kullanarak kolayca fotoğrafınızı gönderebilirsiniz</p>
+       <hr class="mr-3" class="my-4">
+       <form method="POST"  enctype="multipart/form-data">
+           {% csrf_token %}
+         <div class="row">
+           <div class="col">
+               <label class="label">İsminiz:</label>
+               {{ form.Ad_Soyad }}
+           </div>
+         </div>
+         <br>
+         <div class="form-group">
+           <label class="label">Fotoğrafınızı Seçiniz</label>
+           {{ form.Fotograf }}
+         </div>
+         <button type="submit" class="btn btn-lg btn-danger">Gönder</button>
+       </form>
+      </div>
+    </div>
+{% endblock %}

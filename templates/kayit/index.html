@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="icerik">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-6">
+              <a href="/">
+                <div class="fotoalan1">
+                    <img src="/media/{{ photo1.0 }}" alt="foto1" class="img-fluid" style="width: 410px; height: 330px; background-color: red;">
+                </div>
+              </a>
+         </div>
+          <div class="col-md-6">
+              <a href="/">
+                <div class="fotoalan2">
+                    <img src="/media/{{ photo2.0 }}" alt="foto2" class="img-fluid" style="width: 410px; height: 330px; background-color: red;">
+                </div>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
